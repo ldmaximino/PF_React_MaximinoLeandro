@@ -1,0 +1,96 @@
+.articulos {
+    width: 21rem; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0.5px solid rgb(163, 115, 52);
+    background-color: #4e4545;
+    color:rgba(255,255,255,0.7);
+}
+
+.articulos-img {
+    flex: 1; /* Esto hará que la imagen ocupe todo el espacio disponible en la dirección principal (en este caso, la altura) */
+    overflow: hidden; /* Evita que la imagen se desborde del contenedor */
+    border-bottom: 1px solid rgb(163, 115, 52);
+    max-height: 25rem;
+    position: relative; /* Añadido para posicionar correctamente el texto superpuesto */
+}
+
+.articulos-img img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupará todo el alto del contenedor */
+    object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+}
+
+.texto-superpuesto {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Evita que el texto afecte a los eventos del mouse */
+    color:white;
+    font-size:2.5rem;
+    font-weight: bold;
+    font-family: 'Hind','Times New Roman', Times, serif;
+    text-align:center;
+}
+
+.articulos-img:hover {
+    cursor:pointer;
+    opacity: 0.6;
+}
+
+.articulos-img:hover .texto-superpuesto {
+    opacity: 1;
+}
+  
+.articulos-datos {
+    padding: 10px; 
+    text-align: center; 
+}
+  
+.articulos-datos-categoria {
+    color: rgba(255,255,255,0.4);
+    font-size:0.9rem;
+    font-family: 'Hind', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+}
+
+.articulos-datos-nombre {
+    height: 60px;
+    color: rgba(255,255,255,0.8);
+    font-size:1.1rem;
+    font-family: 'Hind', 'Arial Narrow', Arial, sans-serif;
+}
+
+.articulos-datos-precio {
+    color: #ebda87;
+    font-size: 1.4rem;
+    font-family:'Poppins',Arial,sans-serif;
+    font-weight: 600;
+}
+
+/* Responsive Degign 651 - 1200 px */
+@media (min-width: 651px) and (max-width: 1200px) {
+    .articulos {
+        width: 22rem; 
+    }
+}
+
+/* Responsive Degign 1201 - 1300 px*/
+@media (min-width: 1201px) and (max-width: 1300px) {
+    .articulos {
+        width: 20rem; 
+    }
+}
+
+/* Responsive Degign 1301 px en adelante */
+@media (min-width: 1301px) {
+    .articulos {
+        width: 22rem; 
+    }
+}

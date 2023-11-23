@@ -1,0 +1,25 @@
+.itemList-section {
+    width:98vw;
+    padding:2rem 6.5rem;
+}
+
+/* Responsive Degign 651 - 1200 px */
+@media (min-width: 651px) and (max-width: 1200px) {
+    .itemList-section {
+        padding:2rem 2rem;
+    }
+}
+
+/* Responsive Degign 1201 - 1300 px*/
+@media (min-width: 1201px) and (max-width: 1300px) {
+    .itemList-section {
+        padding:3rem 5rem;
+    }
+}
+
+/* Responsive Degign 1301 px en adelante */
+@media (min-width: 1301px) {
+    .itemList-section {
+        padding:2rem 10rem;
+    }
+}

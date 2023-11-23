@@ -1,0 +1,22 @@
+/* Loading - Spinner */
+.spinner-padre { /* centra el spinner */
+    height: 100vh;
+    position: relative;
+}
+
+.spinner-hijo { /* centra el spinner */
+    margin:0;
+    position:absolute;
+    top:20%;
+    left:50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.spinner-CambioDiseno { /* cambia diseño */
+    width:50px !important;
+    height: 50px !important;
+
+    border:8px solid rgba(255,255,255,0.5) !important;
+    border-right-color:transparent !important;
+}

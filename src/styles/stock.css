@@ -1,0 +1,52 @@
+.stock {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom:4px;
+    text-align: left;
+    color:#fff;
+    font-size:0.9rem;
+    background-color: #635c5c;
+    border:1px solid rgb(108, 107, 107);
+    border-radius: 5px; 
+
+}
+.stock-cantidad {
+    margin:0 0 1% 7%;
+    font-weight: bold;
+}
+
+.stock-en-carrito {
+    margin:0 0 1% 1%;
+    font-weight: bold;
+}
+
+.stock-disponible {
+    margin:0 2% 1% 5%;
+    background-color: rgb(42, 37, 37);
+    margin-top:3px;
+    padding:0 4px;
+    border-radius:6px;
+    color:rgb(170, 255, 0);
+    font-weight: bold;
+}
+
+.disponible-cero {
+    color:red;
+}
+
+.stock-text-agotado {
+    width:auto;
+    margin-left:30px;
+    height: auto;
+    padding:2px;
+    background-color: rgba(255,255,255,0.5);
+    color:rgba(172, 25, 25, 0.814);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border:1px solid rgba(172, 25, 25, 0.814);
+    border-radius: 10px;
+}
