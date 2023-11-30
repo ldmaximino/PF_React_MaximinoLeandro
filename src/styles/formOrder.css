@@ -234,4 +234,8 @@ input:-webkit-autofill {
     input {
         width:25rem;
     }
+
+    .order-completed-text {
+        font-size:2.5rem;
+    }
 }
