@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { priceFormat } from "../helpers/priceFormat";
 
 export const CartContext = createContext();
 
@@ -22,8 +23,20 @@ export const CartProvider = ({ children }) => {
       return carrito.reduce((totAcum, valAct) => totAcum + valAct.cantidad, 0); //actualiza la cantidad del CartWidget
    }
 
+   const vaciarCarrito = () => {
+      setCarrito([]);
+      setTimeout(() => {
+        window.location.href = '/'
+      }, 800);
+    };
+  
+    
+   const totalCarrito = () => {
+      return priceFormat(carrito.reduce((acum, it) => acum + (it.price * it.cantidad), 0));
+   }
+
    return (
-      <CartContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadCarrito }}>
+      <CartContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadCarrito, totalCarrito, vaciarCarrito }}>
          {children /* children trae todo lo que está encerrado entre el <CartProvider></CartProvider> en App.jsx */}
       </CartContext.Provider>
    )

@@ -1,14 +1,13 @@
 import { useContext,useState } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { priceFormat } from '../helpers/priceFormat';
 import { toCapitalLetter } from "../helpers/toCapitalLetter";
-import { FormOrder } from "./FormOrder";
 
 import '../styles/cart.css';
-import { Link } from "react-router-dom";
 
 export const Cart = () => {
-  const { carrito, setCarrito } = useContext(CartContext);
+  const { carrito, setCarrito, vaciarCarrito, totalCarrito } = useContext(CartContext);
   
   const deleteItem = (itemID) => {
     const nuevoCarrito = [...carrito];
@@ -21,18 +20,6 @@ export const Cart = () => {
       }, 800);
     }
   };
-
-  const vaciarCarrito = () => {
-    setCarrito([]);
-    setTimeout(() => {
-      window.location.href = '/'
-    }, 800);
-  };
-
-  const totalCarrito = () => {
-    return priceFormat(carrito.reduce((acum, it) => acum + (it.price * it.cantidad), 0));
-  }
-
   
   return (
     <>
@@ -67,7 +54,7 @@ export const Cart = () => {
             <p className="cart-total-price">$ {totalCarrito()}</p>
           </div>
           
-          <Link to="/form" onClick={<FormOrder />}><button className="cart-finalizarCompra">Confirmar Orden</button></Link>
+          <Link className="cart-finalizarCompra" to="/form">Completar Orden</Link>
         </div>
       </>
       }

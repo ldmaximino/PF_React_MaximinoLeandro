@@ -45,6 +45,7 @@ input {
     border-bottom: 1px solid white;
     font-family: 'Roboto';
     color:white;
+    opacity: 0.9;
     font-size:0.9rem;
     width:20rem;
     margin-bottom: 8px;
@@ -58,12 +59,179 @@ input:hover {
     border-bottom: 2px solid rgb(225, 156, 67);
 }
 
-input:focus {
+input:focus,
+input:active {
     border: 0px solid transparent;
     border-bottom: 3px solid rgb(225, 156, 67);
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    transition: background-color 0s 50000s !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important; /* Agregamos esta línea para especificar el color del texto en WebKit */
+}
+
+.form-total {
+    margin:0 auto;
+    background-color: #3b3434;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+.form-total-label {
+    padding:0.5rem 0.6rem;
+    padding-left:0;
+    color:white;
+    opacity: 0.7;
+    font-size:0.9rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-total-price {
+    width:auto;
+    height: auto;
+    padding:0.5rem 1rem;
+    color:white;
+    background-color: #585050;
+    font-size:0.8;
+    font-weight: 600;
+    border:1px solid transparent;
+    border-radius:10px;
+    text-align: center;
+}
+
 .form-buy {
-    margin-top:4rem;
-    
+    width:auto;
+    height: auto;
+    margin:0 auto;
+    padding:0.5rem 1rem;
+    color:#ebda87;
+    background-color: #474343;
+    font-size:1rem;
+    font-weight: bold;
+    border:1px solid #ebda87;
+    border-radius:10px;
+    text-align: center;
+    margin-bottom:3rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-buy:hover {
+    cursor:pointer;
+    color:#474343;
+    background-color:#ebda87;
+}
+
+.form-buy-disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.valid-error {
+    padding-left:30px;
+    color:rgb(255, 128, 0);
+    font-size:0.7rem;
+}
+
+.order {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin:10rem auto;
+    color:rgb(0, 255, 187)
+}
+
+.order-completed-icon {
+    height: 40px;
+    width: 40px;
+    color:greenyellow;
+}
+
+.order-completed-text {
+    font-size:1.7rem;
+    color:greenyellow;
+}
+
+.order-thanks {
+    margin-top:1.5rem;
+    font-size:1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.order-thanks-name {
+    font-family: 'Roboto',sans-serif;
+    font-size:1.3rem;
+}
+
+.order-thanks-text {
+    color:white;
+    opacity: 0.7;
+}
+
+.order-textID {
+    margin-top:1.5rem;
+    margin-bottom:0.2rem;
+    color:white;
+    font-size:0.9rem;
+}
+
+.order-numberID {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:1rem;
+    font-weight: bold;
+    color:greenyellow;
+}
+
+.order-numberID p {
+    margin-bottom:0;
+}
+
+.order-final {
+    margin-top:1.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:50px;
+}
+
+.order-final-home {
+    width:40px;
+    height: 40px;
+    border-radius:50%;
+    transition: background-color 0.3s ease;
+}
+
+.order-final-home:hover {
+    cursor:pointer;
+    background-color: rgb(85, 90, 77);
+    border-radius:50%;
+}
+
+.order-final-copy:hover {
+    cursor:pointer;
+}
+
+/* Responsive Design 651 - 1200 px */
+@media (min-width: 651px) and (max-width: 1200px) {
+    input {
+        width:21rem;
+    }
+}
+
+/* Responsive Degign 1201 - 1300 px*/
+@media (min-width: 1201px) {
+    input {
+        width:25rem;
+    }
 }
