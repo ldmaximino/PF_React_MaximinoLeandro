@@ -1,32 +1,23 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { UseDetailContainer } from '../customHooks/UseDetailContainer';
 import { ItemDetail } from './ItemDetail';
 import { Loading } from './Loading';
-import { bdProductos } from '../data/bdProductos';
+import { Error404 } from './Error404';
 
 export const ItemDetailContainer = () => {
-  const [item, setItem] = useState(null);
-
-  const {id} = useParams();
-
-  useEffect(() => {
-    
-      const myPromise = new Promise((resolve,reject) => {
-        setTimeout(() => {
-          resolve(bdProductos);
-        }, 2000);
-      })
-      myPromise.then((response) => {
-          const findById = response.find(it => it.codigo === id);
-          setItem(findById);
-      });
-
-  },[id]);
+  const { id } = useParams();
+  const { item, error } = UseDetailContainer(id);
 
   return (
     <>
-       {item ? <ItemDetail item={item}/> : <Loading />}
+      {
+        error
+          ? <Error404 />
+          : item
+            ? <ItemDetail item={item} />
+            : <Loading color="warning" />
+      }
     </>
   )
 }

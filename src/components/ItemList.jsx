@@ -3,18 +3,18 @@ import { Item } from "./Item"
 
 import '../styles/itemList.css';
 
-export const ItemList = ({items, categoria}) => {
+export const ItemList = ({items, category}) => {
   const cantidad = items.length;
   let descripcion = "";
-  categoria 
-    ? descripcion = toCapitalLetter(categoria) + ": "
+  category
+    ? descripcion = toCapitalLetter(category) + ": "
     : descripcion = "Total Productos: ";
 
   return (
     <>
       <h3 className="itemList-title">{descripcion} {cantidad}</h3>
       <div className="section-products">
-        {items.map(item => <Item key={item.codigo} item={item}/>)}
+        {items.map(item => <Item key={item.id} item={item}/>)}
       </div>
     </>
   )

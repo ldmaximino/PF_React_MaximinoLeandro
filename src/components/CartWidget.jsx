@@ -8,7 +8,7 @@ import '../styles/navBar.css';
 
 export const CartWidget = () => {
   const { cantidadCarrito } = useContext(CartContext);
-  console.log(cantidadCarrito());
+
   return (
     <Link className={`${(cantidadCarrito() === 0) ? "cart-disabled" : ""}`} to="/carrito">
       <div className="cart">

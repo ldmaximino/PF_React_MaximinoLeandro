@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import { CartProvider } from './contexts/CartContext';
 import { Cart } from './components/Cart';
+import { FormOrder } from './components/FormOrder';
 
 import './styles/App.css';
 
@@ -19,9 +20,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/category/:idCat" element={<ItemListContainer />} />
           <Route path="/items/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Cart />} />
+          <Route path="/form" element={<FormOrder />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />

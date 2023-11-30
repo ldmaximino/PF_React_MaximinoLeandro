@@ -15,7 +15,7 @@ module.exports = {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
-      { 'react/prop-types': off}, // Deshabilita la validación de PropTypes
+      { 'react/prop-types': off},
     ],
   },
 }

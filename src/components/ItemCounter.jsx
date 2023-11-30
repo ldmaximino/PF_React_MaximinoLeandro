@@ -4,8 +4,8 @@ import { CartContext } from "../contexts/CartContext";
 
 import '../styles/ItemCounter.css';
 
-export const ItemCounter = ({ item , cantDisponible }) => {
-  const [cantidad, setCantidad] = useState(0);
+export const ItemCounter = ({ item , cantDisponible,initial }) => {
+  const [cantidad, setCantidad] = useState(initial);
   const { agregarAlCarrito } = useContext(CartContext);
 
   const handleCounterSub = () => {
@@ -41,7 +41,10 @@ export const ItemCounter = ({ item , cantDisponible }) => {
       <button
         className={`btn-agregar ${isSubButtonDisabled ? "btn-agregar-disabled" : ""}`}
         disabled={isSubButtonDisabled}
-        onClick={() => { agregarAlCarrito(item, cantidad),setCantidad(0) } /* Agrego una función flecha al onClick para poder pasar los argumentos item y cantidad */}
+        onClick={() => { 
+          agregarAlCarrito(item, cantidad),
+          setCantidad(0)
+        } /* Agrego una función flecha al onClick para poder pasar los argumentos item y cantidad. También seteo a cantidad = 0 */}
       >
         Añadir al Carrito
       </button>

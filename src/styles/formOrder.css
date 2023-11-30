@@ -1,0 +1,69 @@
+.form {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    margin-top:8rem;
+    width:90%;
+    gap:20px;
+}
+
+.form-div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-div-icons {
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.icons {
+    color:white;
+    width: 20px;
+    height: 20px;
+    
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size:0.8rem;
+    margin-bottom:4px;
+    opacity: 0.6;
+    display: flex;
+    padding-left:30px;
+}
+
+input {
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-bottom: 1px solid white;
+    font-family: 'Roboto';
+    color:white;
+    font-size:0.9rem;
+    width:20rem;
+    margin-bottom: 8px;
+    padding-bottom:6px;
+    outline:none;
+    transition: border-bottom 0.3s linear;
+}
+
+input:hover {
+    cursor:auto;
+    border-bottom: 2px solid rgb(225, 156, 67);
+}
+
+input:focus {
+    border: 0px solid transparent;
+    border-bottom: 3px solid rgb(225, 156, 67);
+}
+
+.form-buy {
+    margin-top:4rem;
+    
+}
