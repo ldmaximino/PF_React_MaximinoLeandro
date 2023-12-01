@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { CartWidget } from "./CartWidget"
 
+import imgLogo from '../assets/logo.png';
 import '../styles/navBar.css';
 
 export const NavBar = () => {
@@ -17,7 +18,7 @@ export const NavBar = () => {
           <nav className="nav">
             <div className="nav-line1">
               <div className="logo">
-                <Link to="/" onClick={() => handleLinkClick(4)}><img src="../src/assets/logo.png" alt="Logo Hüaraché" /> </Link>
+                <Link to="/" onClick={() => handleLinkClick(4)}><img src={imgLogo} alt="Logo Hüaraché" /> </Link>
                 <Link to="/" onClick={() => handleLinkClick(4)}><h1>Hüaraché</h1></Link>
               </div>
               <CartWidget />
