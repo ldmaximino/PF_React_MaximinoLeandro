@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 import { priceFormat } from '../helpers/priceFormat';
 import { toCapitalLetter } from "../helpers/toCapitalLetter";
+import imgDeleteItem from "../assets/delete.png"
 
 import '../styles/cart.css';
 
@@ -37,8 +38,8 @@ export const Cart = () => {
                     <p>{(item.cantidad === 1) ? "unidad" : "unidades"}</p>
                 </div>
                 <p className="cart-article-precio">$ {priceFormat(item.cantidad * item.price)}</p>
-                <button className="cart-article-delete" onClick={() => deleteItem(item.id)}><img className="cart-article-trash" src="../src/assets/delete.png" alt="Eliminar Producto" /></button>
-            </article>
+                <button className="cart-article-delete" onClick={() => deleteItem(item.id)}><img className="cart-article-trash" src={imgDeleteItem} alt="Eliminar Producto" /></button>
+          </article>
 
           )) 
         }
