@@ -14,7 +14,7 @@ import { db } from '../firebase/config';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import '../styles/FormOrder.css';
+import '../styles/formOrder.css';
 
 export const FormOrder = () => {
     const { carrito, setCarrito, totalCarrito, vaciarCarrito } = useContext(CartContext);
@@ -25,6 +25,7 @@ export const FormOrder = () => {
     const [orderID, setOrderID] = useState('');
     const [copiedID, setCopiedId] = useState(false);
     const [toolTipCopy, setToolTipCopy] = useState("Copiar");
+    
     const [valoresInput, setValoresInput] = useState({
         name: '',
         email: '',
@@ -80,7 +81,8 @@ export const FormOrder = () => {
         setToolTipCopy("Copiado");
     };
 
-    if (orderID) { //se hace un early-return cuando orderID tiene asignado un nro de orden
+    //se hace un early-return cuando orderID tiene asignado un nro de orden
+    if (orderID) {
         return (
             <div className="order">
                 <MdOutlineVerifiedUser className="order-completed-icon" />

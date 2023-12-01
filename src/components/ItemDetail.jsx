@@ -1,7 +1,7 @@
 import { priceFormat } from '../helpers/priceFormat';
 import { Stock } from './Stock';
 
-import '../styles/ItemDetail.css';
+import '../styles/itemDetail.css';
 
 export const ItemDetail = ({item}) => {
 
