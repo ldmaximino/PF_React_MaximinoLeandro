@@ -17,7 +17,7 @@ export const Stock = ({item}) => {
     <>
       <div className="stock">        
         {(item.quantity > 0 && cantEnCarrito() > 0) ? <p className="stock-en-carrito">Carrito: {carrito.length > 0 && cantEnCarrito()}</p> : <p className="stock-en-carrito"> </p>}
-        <p className={`stock-cantidad ${item.quantity === 0 ? " stock-text-agotado" : ""}`}>{(item.quantity === 0) ? " A  G  O  T  A  D  O " : `Stock: ${item.quantity}`}</p>
+        <p className={`stock-cantidad ${item.quantity === 0 ? " stock-text-agotado" : ""}`}>{(item.quantity === 0) ? "A G O T A D O" : `Stock: ${item.quantity}`}</p>
         {
           (item.quantity > 0 && cantEnCarrito() > 0) 
               ? <p className={`stock-disponible ${(item.quantity - cantEnCarrito()) === 0 ? "disponible-cero" : ""}`}>Disp: {item.quantity - cantEnCarrito()}</p> 

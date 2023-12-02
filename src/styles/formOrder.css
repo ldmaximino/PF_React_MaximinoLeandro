@@ -231,7 +231,11 @@ input:-webkit-autofill {
 }
 
 /* Responsive Degign 1201 - 1400 px*/
-@media (min-width: 1201px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .form {
+        padding:8rem 0;
+    }
+
     input {
         width:25rem;
     }
@@ -243,8 +247,17 @@ input:-webkit-autofill {
 
 /* Responsive Degign 1401px en adelante */
 @media (min-width: 1401px) {
+    .form {
+        padding:8rem 0;
+    }
+
     input {
         width:25rem;
+    }
+
+    .order {
+        margin-top:12rem;
+        margin-bottom:12rem;
     }
 
     .order-completed-text {

@@ -1,14 +1,11 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { validaEmail } from "../helpers/validaEmail";
-import { FaUserTie } from "react-icons/fa";
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { MdOutlineVerifiedUser } from "react-icons/md";
-import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
-import { MdHome } from "react-icons/md";
+import { MdOutlineAlternateEmail, MdOutlineVerifiedUser, MdOutlineKeyboardDoubleArrowDown, MdHome } from "react-icons/md";
 import { ImCopy } from "react-icons/im";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { CiPhone } from "react-icons/ci";
+import { FaUserTie } from "react-icons/fa";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../firebase/config';
 import Tippy from '@tippyjs/react';
@@ -82,6 +79,7 @@ export const FormOrder = () => {
     };
 
     //se hace un early-return cuando orderID tiene asignado un nro de orden
+
     if (orderID) {
         return (
             <div className="order">
@@ -106,7 +104,7 @@ export const FormOrder = () => {
                     </Tippy>
                 </div>
                 <div className="order-final">
-                    <Tippy content="Home" placement="left">
+                    <Tippy content="Home" placement="bottom">
                         <div>
                             <MdHome className="order-final-home" onClick={() => vaciarCarrito()} />
                         </div>

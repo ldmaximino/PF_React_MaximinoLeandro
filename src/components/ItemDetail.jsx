@@ -2,6 +2,7 @@ import { priceFormat } from '../helpers/priceFormat';
 import { Stock } from './Stock';
 
 import '../styles/itemDetail.css';
+import { toCapitalLetter } from '../helpers/toCapitalLetter';
 
 export const ItemDetail = ({item}) => {
 
@@ -17,7 +18,7 @@ export const ItemDetail = ({item}) => {
         </div>
         <div className="item-text">
             <p className="item-text-nombre">{item.name}</p>
-            <p className="item-text-categoria">Categoria: {item.category}</p>
+            <p className="item-text-categoria">Categoria: {toCapitalLetter(item.category)}</p>
             <ol>
                 {item.detalle1 && <li>{item.det1}</li>}
                 {item.detalle2 && <li>{item.det2}</li>}

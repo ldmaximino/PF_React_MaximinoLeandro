@@ -1,11 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { priceFormat } from "../helpers/priceFormat";
 
 export const CartContext = createContext();
 
+const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
+
 export const CartProvider = ({ children }) => {
 
-   const [carrito, setCarrito] = useState([]);
+   const [carrito, setCarrito] = useState(carritoInicial);
 
    const agregarAlCarrito = (item, orderedItems) => {
       const itemAgregado = { ...item, orderedItems };
@@ -35,6 +37,11 @@ export const CartProvider = ({ children }) => {
       return priceFormat(carrito.reduce((acum, it) => acum + (it.price * it.orderedItems), 0));
    }
 
+   useEffect(() => {
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+   }, [carrito])
+   
+   
    return (
       <CartContext.Provider value={{ carrito, setCarrito, agregarAlCarrito, cantidadCarrito, totalCarrito, vaciarCarrito }}>
          {children /* children trae todo lo que está encerrado entre el <CartProvider></CartProvider> en App.jsx */}
