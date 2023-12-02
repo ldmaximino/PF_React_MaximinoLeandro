@@ -230,8 +230,19 @@ input:-webkit-autofill {
     }
 }
 
-/* Responsive Degign 1201 - 1300 px*/
+/* Responsive Degign 1201 - 1400 px*/
 @media (min-width: 1201px) {
+    input {
+        width:25rem;
+    }
+
+    .order-completed-text {
+        font-size:2.5rem;
+    }
+}
+
+/* Responsive Degign 1401px en adelante */
+@media (min-width: 1401px) {
     input {
         width:25rem;
     }

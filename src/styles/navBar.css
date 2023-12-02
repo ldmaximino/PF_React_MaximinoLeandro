@@ -127,15 +127,15 @@
     }
 }
 
-/* Responsive Degign 1201 - 1300 px*/
-@media (min-width: 1201px) and (max-width: 1300px) {
+/* Responsive Degign 1201 - 1400 px*/
+@media (min-width: 1201px) and (max-width: 1400px) {
     .nav-line2-text {
         font-size:1.5rem;
     }
 }
 
-/* Responsive Degign 1301 px en adelante */
-@media (min-width: 1301px) {
+/* Responsive Degign 1401 px en adelante */
+@media (min-width: 1401px) {
     .nav-line2-text {
         font-size:1.5rem;
     }      

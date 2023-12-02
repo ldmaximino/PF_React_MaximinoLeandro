@@ -34,10 +34,10 @@ export const Cart = () => {
                     <p>{toCapitalLetter(item.category)}</p>
                 </div>
                 <div className="cart-article-cantidad">
-                    <span>{item.cantidad}</span>
-                    <p>{(item.cantidad === 1) ? "unidad" : "unidades"}</p>
+                    <span>{item.orderedItems}</span> 
+                    <p>{(item.orderedItems === 1) ? "unidad" : "unidades"}</p> 
                 </div>
-                <p className="cart-article-precio">$ {priceFormat(item.cantidad * item.price)}</p>
+                <p className="cart-article-precio">$ {priceFormat(item.orderedItems * item.price)}</p> 
                 <button className="cart-article-delete" onClick={() => deleteItem(item.id)}><img className="cart-article-trash" src={imgDeleteItem} alt="Eliminar Producto" /></button>
           </article>
 

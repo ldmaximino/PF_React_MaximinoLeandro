@@ -30,16 +30,16 @@
     }
 }
 
-/* Responsive Degign 1201 - 1300 px*/
-@media (min-width: 1201px) and (max-width: 1300px) {
+/* Responsive Degign 1201 - 1400 px*/
+@media (min-width: 1201px) and (max-width: 1400px) {
     .section-products {
         grid-template-columns: repeat(3,1fr);
     }
 }
 
-/* Responsive Degign 1301 px en adelante */
-@media (min-width: 1301px) {
+/* Responsive Degign 1401 px en adelante */
+@media (min-width: 1401px) {
     .section-products {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
 }

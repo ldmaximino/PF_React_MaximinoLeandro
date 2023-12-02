@@ -4,7 +4,7 @@ import { CartContext } from "../contexts/CartContext";
 
 import '../styles/itemCounter.css';
 
-export const ItemCounter = ({ item , cantDisponible,initial }) => {
+export const ItemCounter = ({ item , cantDisponible , initial }) => {
   const [cantidad, setCantidad] = useState(initial);
   const { agregarAlCarrito } = useContext(CartContext);
 

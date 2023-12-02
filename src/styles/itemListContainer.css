@@ -6,20 +6,20 @@
 /* Responsive Degign 651 - 1200 px */
 @media (min-width: 651px) and (max-width: 1200px) {
     .itemList-section {
-        padding:2rem auto;
+        padding:2rem 9rem;
     }
 }
 
-/* Responsive Degign 1201 - 1300 px*/
-@media (min-width: 1201px) and (max-width: 1300px) {
+/* Responsive Degign 1201 - 1400 px*/
+@media (min-width: 1201px) and (max-width: 1400px) {
     .itemList-section {
         padding:3rem auto;
     }
 }
 
-/* Responsive Degign 1301 px en adelante */
-@media (min-width: 1301px) {
+/* Responsive Degign 1401 px en adelante */
+@media (min-width: 1401px) {
     .itemList-section {
-        padding:2rem auto;
+        padding:2rem 11rem;
     }
 }

@@ -7,20 +7,20 @@ export const CartProvider = ({ children }) => {
 
    const [carrito, setCarrito] = useState([]);
 
-   const agregarAlCarrito = (item, cantidad) => {
-      const itemAgregado = { ...item, cantidad };
+   const agregarAlCarrito = (item, orderedItems) => {
+      const itemAgregado = { ...item, orderedItems };
       const nuevoCarrito = [...carrito]; /* Se crea el array nuevoCarrito para poder pushearlo y no mutar el original (carrito). Personalmente me resulta más práctico y más legible este método que el visto en clase */
       const itemExistente = nuevoCarrito.find((prod) => prod.id === itemAgregado.id);
 
       itemExistente
-         ? itemExistente.cantidad += cantidad
+         ? itemExistente.orderedItems += orderedItems
          : nuevoCarrito.push(itemAgregado); /* se hizo el push sin mutar el array original carrito */
 
       setCarrito(nuevoCarrito);
    };
 
    const cantidadCarrito = () => {
-      return carrito.reduce((totAcum, valAct) => totAcum + valAct.cantidad, 0); //actualiza la cantidad del CartWidget
+      return carrito.reduce((totAcum, valAct) => totAcum + valAct.orderedItems, 0); //actualiza la cantidad del CartWidget
    }
 
    const vaciarCarrito = () => {
@@ -32,7 +32,7 @@ export const CartProvider = ({ children }) => {
   
     
    const totalCarrito = () => {
-      return priceFormat(carrito.reduce((acum, it) => acum + (it.price * it.cantidad), 0));
+      return priceFormat(carrito.reduce((acum, it) => acum + (it.price * it.orderedItems), 0));
    }
 
    return (
