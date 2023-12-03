@@ -53,6 +53,10 @@
     gap:60px;
 }
 
+.social-media {
+    display:none;
+}
+
 .img-IG {
     width:25px;
     height: 25px;
@@ -144,6 +148,10 @@
     .nav-line2-text {
         font-size:1.2rem;
     }
+
+    .social-media {
+        display:flex;
+    }
 }
 
 /* Responsive Degign 1201 - 1400 px*/
@@ -154,6 +162,10 @@
 
     .nav-line2-text {
         font-size:1.5rem;
+    }
+
+    .social-media {
+        display:flex;
     }
 }
 
@@ -166,4 +178,7 @@
     .nav-line2-text {
         font-size:1.5rem;
     }      
+    .social-media {
+        display:flex;
+    }
 }
