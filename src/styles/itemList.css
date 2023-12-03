@@ -1,8 +1,9 @@
 .section-products {
     display:grid;
     grid-template-columns: repeat(1,1fr);
-    gap:40px;
+    gap:30px;
     animation: fadein 1.5s ease;
+    width:90vw;
 }
 
 @keyframes fadein {

@@ -44,6 +44,25 @@
     border-radius: 40%;
 }
 
+.social-media {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left:-120px;
+    gap:60px;
+}
+
+.img-IG {
+    width:25px;
+    height: 25px;
+}
+
+.img-wapp {
+    width:25px;
+    height: 25px;
+}
+
 /* Imagen CartWidget */
 .cart {
     display:flex;
@@ -76,7 +95,7 @@
 .nav-line2 {
     display: flex;
     justify-content: center;
-    gap:50px;
+    gap:15px;
     background-color:#968787;
 }
 
@@ -129,6 +148,10 @@
 
 /* Responsive Degign 1201 - 1400 px*/
 @media (min-width: 1201px) and (max-width: 1400px) {
+    .nav-line2 {
+        gap:40px;
+    }
+
     .nav-line2-text {
         font-size:1.5rem;
     }
@@ -136,6 +159,10 @@
 
 /* Responsive Degign 1401 px en adelante */
 @media (min-width: 1401px) {
+    .nav-line2 {
+        gap:80px;
+    }
+
     .nav-line2-text {
         font-size:1.5rem;
     }      

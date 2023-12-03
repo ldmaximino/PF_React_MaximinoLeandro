@@ -13,13 +13,13 @@
 /* Responsive Degign 1201 - 1400 px*/
 @media (min-width: 1201px) and (max-width: 1400px) {
     .itemList-section {
-        padding:3rem auto;
+        padding:3rem 5.5rem;
     }
 }
 
 /* Responsive Degign 1401 px en adelante */
 @media (min-width: 1401px) {
     .itemList-section {
-        padding:2rem 11rem;
+        padding:2rem 7rem;
     }
 }

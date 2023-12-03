@@ -89,7 +89,7 @@
     width:98%;
     margin:0 auto;
     padding:0rem 0 2rem 0;
-    gap:20px;
+    gap:10px;
     background-color: #3b3434;
     padding:1.5rem 3rem;
     margin-bottom:0.6rem;
@@ -143,7 +143,7 @@
     margin:0 auto;
     background-color: #3b3434;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
     padding:1rem 0;
@@ -152,11 +152,12 @@
 .cart-total-label {
     width:auto;
     height: auto;
-    padding:0.5rem 1rem;
+    padding:0.5rem 0.5rem;
     color:#ebda87;
-    font-size:0.9rem;
+    font-size:1rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom:0;
 }
 
 .cart-total-price {
@@ -175,14 +176,26 @@
 .cart-vacio {
     color:#ebda87;
     text-align: center;
-    margin:4rem auto;
+    margin:6rem auto;
 }
 
 /* Responsive Design 651 - 1200 px */
 @media (min-width: 651px) and (max-width: 1200px) {
+    .cart-total {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+    }
+
     .cart-pie {
         padding:1.5rem 7.1rem;
         margin-bottom:1rem;
+      
+    }
+
+    .cart-total-price {
+        margin-bottom:0;
     }
 }
 
@@ -217,7 +230,7 @@
 
     .cart-pie {
         padding:1.5rem 16.6rem;
-        margin-bottom:1rem;
+        margin-bottom:8rem;
     }
     
     .cart-vaciar, .cart-finalizarCompra {
@@ -225,13 +238,21 @@
         font-weight: bold;
     }
     
+    .cart-total {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .cart-total-label {
+        font-size:1.2rem;
+    }
+
     .cart-total-price {
         font-size:1.2rem;
         border-radius:10px;
-    }
-
-    .cart-total-label {
-        font-size:1.2rem;
+        margin-bottom:0;
     }
 }
 
@@ -266,7 +287,7 @@
 
     .cart-pie {
         padding:1.5rem 23.5rem;
-        margin-bottom:1rem;
+        margin-bottom:27rem;
     }
     
     .cart-vaciar, .cart-finalizarCompra {
@@ -274,12 +295,20 @@
         font-weight: bold;
     }
     
-    .cart-total-price {
-        font-size:1.2rem;
-        border-radius:10px;
+    .cart-total {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
     }
 
     .cart-total-label {
         font-size:1.2rem;
+    }
+
+    .cart-total-price {
+        font-size:1.2rem;
+        border-radius:10px;
+        margin-bottom:0;
     }
 }

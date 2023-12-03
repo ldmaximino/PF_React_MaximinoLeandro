@@ -4,6 +4,10 @@ import { useState } from 'react';
 import { CartWidget } from "./CartWidget"
 
 import imgLogo from '../assets/logo.png';
+import imgWapp from '../assets/imgWapp.png';
+import imgIG from '../assets/imgIG.png';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import '../styles/navBar.css';
 
 export const NavBar = () => {
@@ -20,6 +24,18 @@ export const NavBar = () => {
               <div className="logo">
                 <Link to="/" onClick={() => handleLinkClick(4)}><img src={imgLogo} alt="Logo Hüaraché" /> </Link>
                 <Link to="/" onClick={() => handleLinkClick(4)}><h1>Hüaraché</h1></Link>
+              </div>
+              <div className="social-media">
+                <Tippy content="@leandrodanielmaximino" placement="left">
+                  <a href="https://www.instagram.com/leandrodanielmaximino" target="_blank" rel="noopener noreferrer">
+                    <img className="img-IG" src={imgIG} alt="" />
+                  </a>
+                </Tippy>
+                <Tippy content="Enviame un Wapp al +54 3465 481742" placement="right">
+                  <a href="https://api.whatsapp.com/send?phone=+3465481742text=" target="_blank">
+                    <img className="img-wapp" src={imgWapp} alt="" />
+                  </a>
+                </Tippy>
               </div>
               <CartWidget />
             </div>

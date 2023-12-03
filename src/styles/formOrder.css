@@ -233,7 +233,7 @@ input:-webkit-autofill {
 /* Responsive Degign 1201 - 1400 px*/
 @media (min-width: 1201px) and (max-width: 1400px) {
     .form {
-        padding:8rem 0;
+        padding:0 0;
     }
 
     input {
