@@ -32,7 +32,6 @@ export const NavBar = () => {
                   </a>
                 </Tippy>
                 <Tippy content="Enviame un Wapp al +54 3465 481742" placement="right">
-                  {/*<a href="https://api.whatsapp.com/send?phone=+3465481742text=" target="_blank">*/}
                   <a href="https://api.whatsapp.com/send?phone=+543465481742&text=Hola%20Huarache!%20Los%20contacto%20desde%20la%20web...." target="_blank">
                     <img className="img-wapp" src={imgWapp} alt="" />
                   </a>

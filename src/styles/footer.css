@@ -15,9 +15,11 @@
 .img-IG {
     width:25px;
     height: 25px;
+    user-select: none;
 }
 
 .img-wapp {
     width:25px;
     height: 25px;
+    user-select: none;
 }

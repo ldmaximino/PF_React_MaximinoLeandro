@@ -20,10 +20,10 @@ export const ItemDetail = ({item}) => {
             <p className="item-text-nombre">{item.name}</p>
             <p className="item-text-categoria">Categoria: {toCapitalLetter(item.category)}</p>
             <ol>
-                {item.detalle1 && <li>{item.det1}</li>}
-                {item.detalle2 && <li>{item.det2}</li>}
-                {item.detalle3 && <li>{item.det3}</li>}
-                {item.detalle4 && <li>{item.det4}</li>}
+                {item.det1 && <li>{item.det1}</li>}
+                {item.det2 && <li>{item.det2}</li>}
+                {item.det3 && <li>{item.det3}</li>}
+                {item.det4 && <li>{item.det4}</li>}
             </ol>
             <p className="item-text-precio">Precio $ {priceFormat(item.price)}.-</p>
             <Stock item={item}/>
