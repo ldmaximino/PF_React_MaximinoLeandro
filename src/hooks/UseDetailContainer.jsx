@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { db } from '../firebase/config';
+import { db } from '../services/config';
 import { doc, getDoc } from 'firebase/firestore';
 
 export const UseDetailContainer = (id) => {

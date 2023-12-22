@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { UseItemListContainer } from '../customHooks/UseItemListContainer';
+import { UseItemListContainer } from '../hooks/UseItemListContainer';
 import { ItemList } from './ItemList';
 import { Loading } from './Loading';
 import { Error404 } from './Error404';

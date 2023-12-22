@@ -7,7 +7,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { CiPhone } from "react-icons/ci";
 import { FaUserTie } from "react-icons/fa";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from '../firebase/config';
+import { db } from '../services/config';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
